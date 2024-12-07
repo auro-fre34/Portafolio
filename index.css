@@ -430,7 +430,7 @@ h7 {
 }
 
 .imgsJS {
-    width: 30%;
+    width: 34%;
     height: 50%;
     padding: 3%;
     align-self: center;
@@ -443,7 +443,7 @@ h7 {
     align-self: center;
 }
 
-/* Estilo para las imágenes */
+
 .imgsCSS,
 .imgsJS {
     transition: transform 0.5s ease, box-shadow 0.3s ease;
@@ -451,13 +451,11 @@ h7 {
     margin: 0 auto;
 }
 
-/* Animación de movimiento más pronunciado */
 .imgsCSS:hover,
 .imgsJS:hover {
     transform: translateX(15px) translateY(-10px);
-    /* Movimiento hacia la derecha y arriba */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    /* Sombra para dar efecto de profundidad */
+
 }
 
 /* Movimiento adicional con efecto de rebote */
