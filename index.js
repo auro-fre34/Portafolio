@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         es: {
             "bienvenida": "Bienvenidos",
             "sobre-mi": "Sobre Mi",
+            "inicio": "Home",
             "español": "Español",
             "ingles": "Inglés",
             "habilidades-tecnicas": "Habilidades Técnicas",
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         en: {
             "bienvenida": "Welcome",
             "sobre-mi": "About Me",
+            "inicio": "Home",
             "español": "Spanish",
             "ingles": "English",
             "habilidades-tecnicas": "Programming Skills",
