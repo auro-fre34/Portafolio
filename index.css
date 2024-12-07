@@ -264,11 +264,11 @@ footer {
     left: 70%;
 }
 
-/* Estilo del botón */
+
+/* Botón */
 .btnCurriculum {
     height: 52px;
     padding: 0 20px;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat';
@@ -288,24 +288,19 @@ footer {
     background: #171A1FFF;
 }
 
-/* Pressed */
-.btnCurriculum:active {
-    color: #fff;
-    background: #171A1FFF;
-}
-
 /* Opciones desplegadas (inicialmente ocultas) */
 .dropdown-content {
-    display: none;
+    display: flex;
     position: absolute;
     bottom: 3%;
-    padding: 3%;
     left: 70%;
     background-color: #fff;
     min-width: 150px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 4px;
+    padding: 3%;
+    transition: opacity 0.6s ease;
 }
 
 /* Estilo para los enlaces dentro del dropdown */
@@ -313,7 +308,7 @@ footer {
     color: #000000;
     padding: 5%;
     text-decoration: none;
-    display: block;
+
 }
 
 /* Hover en los enlaces */
@@ -324,7 +319,7 @@ footer {
 
 /* Mostrar las opciones cuando el cursor pase por encima del contenedor */
 .btnCurriculumContainer:hover .dropdown-content {
-    display: flex;
+    display: block;
 }
 
 /* Desactivar el cursor cuando el botón esté deshabilitado */
@@ -332,6 +327,7 @@ footer {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
 
 
 h5 {

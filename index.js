@@ -80,3 +80,33 @@ document.addEventListener("DOMContentLoaded", () => {
     translatePage('es');  // Default to Spanish
 });
 
+
+// Obtener el botón y el contenedor del dropdown
+const btnCurriculum = document.getElementById('curriculumButton');
+const dropdownOptions = document.getElementById('dropdownOptions');
+const btnCurriculumContainer = document.querySelector('.btnCurriculumContainer');
+
+// Función para mostrar el dropdown
+btnCurriculum.addEventListener('click', function (event) {
+    // Evitar que el clic en el botón cierre el dropdown inmediatamente
+    event.stopPropagation();
+    // Alternar la visibilidad del dropdown
+    dropdownOptions.style.display = (dropdownOptions.style.display === 'block') ? 'none' : 'block';
+});
+
+// Cerrar el dropdown si se hace clic fuera de él
+document.addEventListener('click', function (event) {
+    if (!btnCurriculumContainer.contains(event.target)) {
+        dropdownOptions.style.display = 'none';
+    }
+});
+
+// Mantener el dropdown visible mientras el cursor esté sobre el contenedor o el dropdown
+btnCurriculumContainer.addEventListener('mouseenter', function () {
+    dropdownOptions.style.display = 'block';
+});
+
+btnCurriculumContainer.addEventListener('mouseleave', function () {
+    dropdownOptions.style.display = 'none';
+});
+
