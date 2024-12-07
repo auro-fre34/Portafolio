@@ -259,12 +259,21 @@ h5 {
     position: relative;
     top: 190px;
     margin: 3%;
-    left: 43%;
+    left: 37%;
     font-size: 36px;
     letter-spacing: 2px;
     font-weight: normal;
 }
 
+h6 {
+    position: relative;
+    top: 190px;
+    margin: 3%;
+    left: 43%;
+    font-size: 36px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
 
 .cuadros {
     position: relative;
