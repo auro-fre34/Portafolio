@@ -18,63 +18,86 @@
 <body>
     <div>
         <nav class="barra_contenido">
-            <a href="#SobreMi" data-translate="sobre-mi">Sobre Mi</a>
-            <a href="#habilidadesTecnicas" data-translate="habilidades-tecnicas">Habilidades Técnicas</a>
-            <a href="#proyectos" data-translate="proyectos">Proyectos</a>
+            <a href="#sobreMi" data-translate="sobre-mi"></a>
+            <a href="#habilidadesTecnicas" data-translate="habilidades-tecnicas"></a>
+            <a href="#proyectos" data-translate="proyectos"></a>
             <button id="buttonLengua">
                 <select id="languageSwitcher">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
+                    <option value="es" data-translate="español"></option>
+                    <option value="en" data-translate="ingles"></option>
                 </select>
             </button>
         </nav>
     </div>
     <main>
-        <section id="sobreMi">
+        <section id="Inicio">
             <div class="fila">
                 <div class="columna_izq">
-                    <h1 data-translate="ingeniera-software">Ingeniera de Software</h1>
-                    <img class="logo"
-                        src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/logo_khhtc5.svg">
-                    <div class="contacto">
-                        <p class="infoCont" data-translate="contacto">CONTACTO</p>
-                        <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430598/correo_gbu3wn.png"
-                            class="imgsCorreo" alt="" onclick="window.open('ap.aurorapadilla@gmail.com')">
-                        <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/link_ddgjdy.png"
-                            class="imgsIn" alt=""
-                            onclick="window.open('https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile')">
-                        <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/github_yn4myc.png"
-                            class="imgsGit" alt="" onclick="window.open('https://github.com/auro-fre34')">
-                    </div>
+                    <h1 data-translate="bienvenida"></h1>
                 </div>
                 <div class="columna">
                     <div class="about">
-                        <h2 data-translate="sobre-mi-titulo">SOBRE MI</h2>
-                        <h3 data-translate="sobre-mi-frase">“Llevando la luz de la innovación y la calidad al código"
-                        </h3>
-                        <p data-translate="sobre-mi-descripcion">Apasionada en el Desarrollo de Software con enfoque en
-                            front-back end usando JavaScript, HTML y CSS. Me entusiasma la industria y estoy
-                            comprometida
-                            con aprender y crecer profesionalmente. Soy una persona positiva, y me gusta comunicarme en
-                            trabajo de equipo para la solución de diversos trabajos tecnológicos.</p>
+                        <h2 data-translate="sobre-mi-vision"></h2>
+                        <p data-translate="sobre-mi-dVision"></p>
                     </div>
-                    <div class="education">
-                        <h3 data-translate="educacion">Educación</h3>
-                        <p>2026</p>
-                        <p data-translate="universidad">Universidad CENFOTEC</p>
-                        <p data-translate="titulo">Bachillerato de Ingeniería de Software</p>
-                    </div>
-                    <div>
-                        <button class="btnCurriculum"
-                            onclick="window.open('https://www.dropbox.com/scl/fi/60hwsm87m831vyu4385hv/AuroraPadilla_Cv.pdf?rlkey=r2bcjsp07jk5lw4kxfd1zaycc&st=bcmdshrc&dl=0','_blank')"
-                            data-translate="curriculum">Curriculum </button>
+                    <div class="about">
+                        <h2 data-translate="sobre-mi-mision"></h2>
+                        <p data-translate="sobre-mi-dMision"></p>
                     </div>
                 </div>
             </div>
+            <section id="sobreMi">
+                <div class="fila">
+                    <div class="columna_izq">
+                        <h2 data-translate="ingeniera-software"></h2>
+                        <img class="logo"
+                            src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/logo_khhtc5.svg">
+                        <div class="contacto">
+                            <p class="infoCont" data-translate="contacto"></p>
+                            <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430598/correo_gbu3wn.png"
+                                class="imgsCorreo" alt="Correo electrónico" title="Correo electrónico"
+                                onclick="window.open('mailto:ap.aurorapadilla@gmail.com')">
+                            <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/link_ddgjdy.png"
+                                class="imgsIn" alt=""
+                                onclick="window.open('https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile')">
+                            <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/github_yn4myc.png"
+                                class="imgsGit" alt="" onclick="window.open('https://github.com/auro-fre34')">
+                        </div>
+                    </div>
+                    <div class="columna">
+                        <div class="about">
+                            <h2 data-translate="sobre-mi-titulo"></h2>
+                            <h3 data-translate="sobre-mi-frase"></h3>
+                            <p data-translate="sobre-mi-descripcion"></p>
+                        </div>
+                        <div class="education">
+                            <h3 data-translate="educacion"></h3>
+
+                            <p data-translate="universidad"></p>
+                            <p data-translate="titulo"></p>
+                            <h3 data-translate="educacion"></h3>
+                            <p data-translate="universidad"></p>
+                            <p data-translate="titulo"></p>
+                        </div>
+                        <div class="btnCurriculumContainer">
+                            <!-- Botón del Curriculum -->
+                            <button data-translate="curriculum" class="btnCurriculum" id="curriculumButton"> </button>
+                            <div class="dropdown-content" id="dropdownOptions">
+                                <a onclick="window.open('https://www.dropbox.com/scl/fi/60hwsm87m831vyu4385hv/AuroraPadilla_Cv.pdf?rlkey=r2bcjsp07jk5lw4kxfd1zaycc&st=bcmdshrc&dl=0')"
+                                    data-translate="español" target="_blank"></a>
+                                <a onclick="window.open('https://www.dropbox.com/scl/fi/9cujtk4jyx1q6u2h7jwn8/AuroraPadillaCv.pdf?rlkey=bz7nrokq15ppp9f7httgoo5ui&st=1r6j1sol&dl=0')"
+                                    data-translate="ingles" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
         <section id="habilidadesTecnicas">
             <div>
-                <h5 data-translate="habilidades-tecnicas-titulo">Habilidades Técnicas</h5>
+                <h5 data-translate="habilidades-tecnicas-titulo"></h5>
+                <h6 data-translate="habilidades-tecnicas-desc">
+                </h6>
                 <div class="cuadros1">
                     <div class="imgsTecnicas">
                         <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733544457/HTML5_logo_and_wordmark.svg_feefzs.png"
@@ -89,20 +112,15 @@
         </section>
         <section id="proyectos">
             <div>
-                <h6 data-translate="proyectos-titulo">Proyectos</h6>
+                <h7 data-translate="proyectos-titulo"></h7>
                 <div class="cuadros">
                     <div class="cuadros cuadro_1">
-                        <p data-translate="proyecto-1">
-                            Creación de una plataforma web para pacientes y empleados de un hospital, orientada a la
-                            gestión de citas y registros médicos. </p>
+                        <p data-translate="proyecto-1"></p>
                         <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430599/simpeci_e28dzc.png"
                             class="imgSIPECI" alt="">
                     </div>
                     <div class="cuadros cuadro_2">
-                        <p data-translate="proyecto-2">
-                            Desarrollar de una plataforma web para la administración eficiente de paquetes y envíos en
-                            una
-                            empresa de distribución. </p>
+                        <p data-translate="proyecto-2"></p>
                         <img src="https://res.cloudinary.com/dgfooelz8/image/upload/v1733430598/sica3_eq0kgi.png"
                             class="imgSICA" alt="">
                     </div>
@@ -112,7 +130,7 @@
         </section>
     </main>
     <footer>
-        <p data-translate="copyright"> © 2024. Todos los derechos reservados.</p>
+        <p data-translate="copyright"></p>
     </footer>
 </body>
 

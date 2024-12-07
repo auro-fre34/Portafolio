@@ -10,12 +10,44 @@ body {
     font-family: 'Montserrat';
 }
 
+@keyframes cambioDeColor {
+    0% {
+        color: #fffcf6;
+    }
+
+    25% {
+        color: #7ed957;
+    }
+
+    50% {
+        color: #fffcf6;
+    }
+
+    75% {
+        color: #000000;
+    }
+
+    100% {
+        color: #7ed957;
+    }
+}
+
+h1[data-translate="bienvenida"] {
+    animation: cambioDeColor 7s linear infinite;
+}
+
+
+
 body,
 html {
     overflow: scroll;
-    min-height: fit-content;
+
 }
 
+main {
+    align-items: center;
+    display: inline-table;
+}
 
 footer {
     padding-top: 25%;
@@ -25,38 +57,30 @@ footer {
 
 }
 
-/*barra*/
 .barra_contenido {
-    padding: 1%;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-
-.barra_superior {
-    position: relative;
+    height: 2%;
     padding: 1%;
-    left: 0px;
-    width: 25%;
-    background-color: #17171873;
-    border-radius: 1px;
-    border-width: 1px;
-    border-color: #FFFFFF00;
-    border-style: solid;
-    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+    background-color: rgba(23, 23, 23, 0.2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/*Ajusta todas las etiquetas "a" de la barra lateral*/
 .barra_contenido a {
     padding: 10px;
     text-decoration: none;
     color: #FCFBF5;
     align-content: center;
+    display: inline-block;
+
 }
 
-
-/*Cambia el fondo cuando se pasa el mouse encima de una opción*/
 .barra_contenido a:hover {
-    background-color: #39383D;
+    background-color: #7ed957;
+    color: #000000;
     border-radius: 60px;
 }
 
@@ -97,11 +121,18 @@ footer {
 
 .columna_izq h1 {
     padding: 5%;
-    font-size: 40px;
+    font-size: 86px;
+    font-weight: normal;
+}
+
+.columna_izq h2 {
+    padding: 5%;
+    font-size: 56px;
     font-weight: normal;
 }
 
 .fila {
+    padding: 5%;
     display: flex;
     height: 88%;
     align-items: center;
@@ -211,16 +242,29 @@ footer {
     transform: translateY(-15px);
 }
 
+/*Boton*/
 .btnCurriculum {
     position: relative;
-    top: 100px;
+    top: 60px;
     left: 70%;
     display: flex;
     justify-content: center;
 }
 
-/*Boton*/
 
+/* Contenedor del botón */
+.btnCurriculumContainer {
+    position: relative;
+    top: 100px;
+    left: 70%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    left: 70%;
+}
+
+/* Estilo del botón */
 .btnCurriculum {
     height: 52px;
     padding: 0 20px;
@@ -245,22 +289,57 @@ footer {
 }
 
 /* Pressed */
-.btnCurriculum:hover:active {
+.btnCurriculum:active {
     color: #fff;
     background: #171A1FFF;
 }
 
-/*Disabled*/
+/* Opciones desplegadas (inicialmente ocultas) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: 3%;
+    padding: 3%;
+    left: 70%;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: #000000;
+    padding: 5%;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover en los enlaces */
+.dropdown-content a:hover {
+    padding: 1%;
+    background-color: #ddd;
+}
+
+/* Mostrar las opciones cuando el cursor pase por encima del contenedor */
+.btnCurriculumContainer:hover .dropdown-content {
+    display: flex;
+}
+
+/* Desactivar el cursor cuando el botón esté deshabilitado */
 .btnCurriculum:disabled {
     opacity: 0.6;
+    cursor: not-allowed;
 }
+
 
 h5 {
     position: relative;
     top: 190px;
     margin: 3%;
-    left: 37%;
-    font-size: 36px;
+    left: 30%;
+    font-size: 55px;
     letter-spacing: 2px;
     font-weight: normal;
 }
@@ -269,8 +348,18 @@ h6 {
     position: relative;
     top: 190px;
     margin: 3%;
-    left: 43%;
-    font-size: 36px;
+    left: 20%;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+h7 {
+    position: relative;
+    top: 190px;
+    margin: 3%;
+    left: 38%;
+    font-size: 55px;
     letter-spacing: 2px;
     font-weight: normal;
 }
@@ -308,6 +397,12 @@ h6 {
     background-size: cover;
     transition: 0.5s;
 
+}
+
+.cuadros p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: normal;
 }
 
 .cuadro_1 {
